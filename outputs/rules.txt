@@ -1,0 +1,5 @@
+13) TYPE -> NUM
+15) VARTAIL -> ~
+27) TERM -> VAR_INT
+24) TAIL1 -> ~
+<Production Rule Not Found>

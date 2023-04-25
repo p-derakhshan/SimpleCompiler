@@ -1,0 +1,1506 @@
+0) 
+	ZERO-->[].['START'],['EOF']	:2 edges
+____________________START-->[].['BEGIN', 'MAIN', 'END'],['EOF']
+
+
+
+1) 
+	ZERO-->['START'].[],['EOF']	:0 edges
+____________________
+
+2) 
+	START-->['BEGIN'].['MAIN', 'END'],['EOF']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['END']
+
+MAIN-->[].[],['END']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+
+
+3) 
+	START-->['BEGIN', 'MAIN'].['END'],['EOF']	:1 edges
+____________________
+
+4) 
+	MAIN-->['STATEMENT'].['MAIN'],['END']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['END']
+
+MAIN-->[].[],['END']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+
+
+5) 
+	STATEMENT-->['LOOP'].['MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['UNTIL']
+
+MAIN-->[].[],['UNTIL']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+
+
+6) 
+	STATEMENT-->['CONDITION'].['LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:1 edges
+____________________
+
+7) 
+	STATEMENT-->['SL_COMMENT'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:0 edges
+____________________
+
+8) 
+	STATEMENT-->['ML_COMMENT'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:0 edges
+____________________
+
+9) 
+	STATEMENT-->['TYPE'].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:2 edges
+____________________ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']
+
+
+
+10) 
+	STATEMENT-->['ASSIGN'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:0 edges
+____________________
+
+11) 
+	TYPE-->['STR'].[],['ID']	:0 edges
+____________________
+
+12) 
+	TYPE-->['FLT'].[],['ID']	:0 edges
+____________________
+
+13) 
+	TYPE-->['NUM'].[],['ID']	:0 edges
+____________________
+
+14) 
+	ASSIGN-->['ID'].['VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:2 edges
+____________________VARTAIL-->[].['LP', 'VAR_INT', 'RP'],['ASGN']
+
+VARTAIL-->[].[],['ASGN']
+
+
+
+15) 
+	START-->['BEGIN', 'MAIN', 'END'].[],['EOF']	:0 edges
+____________________
+
+16) 
+	MAIN-->['STATEMENT', 'MAIN'].[],['END']	:0 edges
+____________________
+
+17) 
+	STATEMENT-->['LOOP', 'MAIN'].['UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:1 edges
+____________________
+
+18) 
+	MAIN-->['STATEMENT'].['MAIN'],['UNTIL']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['UNTIL']
+
+MAIN-->[].[],['UNTIL']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+
+
+19) 
+	STATEMENT-->['LOOP'].['MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['UNTIL']
+
+MAIN-->[].[],['UNTIL']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+
+
+20) 
+	STATEMENT-->['CONDITION'].['LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:1 edges
+____________________
+
+21) 
+	STATEMENT-->['SL_COMMENT'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:0 edges
+____________________
+
+22) 
+	STATEMENT-->['ML_COMMENT'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:0 edges
+____________________
+
+23) 
+	STATEMENT-->['TYPE'].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:2 edges
+____________________ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']
+
+
+
+24) 
+	STATEMENT-->['ASSIGN'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:0 edges
+____________________
+
+25) 
+	ASSIGN-->['ID'].['VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:2 edges
+____________________VARTAIL-->[].['LP', 'VAR_INT', 'RP'],['ASGN']
+
+VARTAIL-->[].[],['ASGN']
+
+
+
+26) 
+	STATEMENT-->['CONDITION', 'LP'].['BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:8 edges
+____________________BOOLEXP-->[].['TERM', 'BOOLTAIL'],['RP']
+
+TERM-->[].['LP', 'EXP', 'RP'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ID'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_INT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_FLOAT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+
+
+27) 
+	STATEMENT-->['TYPE', 'ASSIGN'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:0 edges
+____________________
+
+28) 
+	ASSIGN-->['ID', 'VARTAIL'].['ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:1 edges
+____________________
+
+29) 
+	VARTAIL-->['LP'].['VAR_INT', 'RP'],['ASGN']	:1 edges
+____________________
+
+30) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL'].['LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:1 edges
+____________________
+
+31) 
+	MAIN-->['STATEMENT', 'MAIN'].[],['UNTIL']	:0 edges
+____________________
+
+32) 
+	STATEMENT-->['LOOP', 'MAIN'].['UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:1 edges
+____________________
+
+33) 
+	STATEMENT-->['CONDITION', 'LP'].['BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:8 edges
+____________________BOOLEXP-->[].['TERM', 'BOOLTAIL'],['RP']
+
+TERM-->[].['LP', 'EXP', 'RP'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ID'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_INT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_FLOAT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+
+
+34) 
+	STATEMENT-->['TYPE', 'ASSIGN'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:0 edges
+____________________
+
+35) 
+	ASSIGN-->['ID', 'VARTAIL'].['ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:1 edges
+____________________
+
+36) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP'].['RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:1 edges
+____________________
+
+37) 
+	BOOLEXP-->['TERM'].['BOOLTAIL'],['RP']	:6 edges
+____________________BOOLTAIL-->[].['GREATER_EQL', 'TERM'],['RP']
+
+BOOLTAIL-->[].['SMALLER_EQL', 'TERM'],['RP']
+
+BOOLTAIL-->[].['GREATER', 'TERM'],['RP']
+
+BOOLTAIL-->[].['SMALLER', 'TERM'],['RP']
+
+BOOLTAIL-->[].['EQL', 'TERM'],['RP']
+
+
+
+38) 
+	TERM-->['LP'].['EXP', 'RP'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:9 edges
+____________________EXP-->[].['PRIOR2', 'TAIL2'],['RP']
+
+PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']
+
+
+
+39) 
+	TERM-->['ID'].[],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:0 edges
+____________________
+
+40) 
+	TERM-->['VAR_INT'].[],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:0 edges
+____________________
+
+41) 
+	TERM-->['VAR_FLOAT'].[],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:0 edges
+____________________
+
+42) 
+	TERM-->['DQUOTE'].['VAR_STRING', 'DQUOTE'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:1 edges
+____________________
+
+43) 
+	TERM-->['ARRAY'].['LB', 'VAR_INT', 'RB'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:1 edges
+____________________
+
+44) 
+	ASSIGN-->['ID', 'VARTAIL', 'ASGN'].['EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:9 edges
+____________________EXP-->[].['PRIOR2', 'TAIL2'],['EOL']
+
+PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+45) 
+	VARTAIL-->['LP', 'VAR_INT'].['RP'],['ASGN']	:1 edges
+____________________
+
+46) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL', 'LP'].['BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:8 edges
+____________________BOOLEXP-->[].['TERM', 'BOOLTAIL'],['RP']
+
+TERM-->[].['LP', 'EXP', 'RP'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ID'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_INT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_FLOAT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+
+
+47) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL'].['LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:1 edges
+____________________
+
+48) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP'].['RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:1 edges
+____________________
+
+49) 
+	ASSIGN-->['ID', 'VARTAIL', 'ASGN'].['EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:9 edges
+____________________EXP-->[].['PRIOR2', 'TAIL2'],['EOL']
+
+PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+50) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP'].['BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:1 edges
+____________________
+
+51) 
+	BOOLEXP-->['TERM', 'BOOLTAIL'].[],['RP']	:0 edges
+____________________
+
+52) 
+	BOOLTAIL-->['GREATER_EQL'].['TERM'],['RP']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['RP']
+
+TERM-->[].['ID'],['RP']
+
+TERM-->[].['VAR_INT'],['RP']
+
+TERM-->[].['VAR_FLOAT'],['RP']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['RP']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['RP']
+
+
+
+53) 
+	BOOLTAIL-->['SMALLER_EQL'].['TERM'],['RP']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['RP']
+
+TERM-->[].['ID'],['RP']
+
+TERM-->[].['VAR_INT'],['RP']
+
+TERM-->[].['VAR_FLOAT'],['RP']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['RP']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['RP']
+
+
+
+54) 
+	BOOLTAIL-->['GREATER'].['TERM'],['RP']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['RP']
+
+TERM-->[].['ID'],['RP']
+
+TERM-->[].['VAR_INT'],['RP']
+
+TERM-->[].['VAR_FLOAT'],['RP']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['RP']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['RP']
+
+
+
+55) 
+	BOOLTAIL-->['SMALLER'].['TERM'],['RP']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['RP']
+
+TERM-->[].['ID'],['RP']
+
+TERM-->[].['VAR_INT'],['RP']
+
+TERM-->[].['VAR_FLOAT'],['RP']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['RP']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['RP']
+
+
+
+56) 
+	BOOLTAIL-->['EQL'].['TERM'],['RP']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['RP']
+
+TERM-->[].['ID'],['RP']
+
+TERM-->[].['VAR_INT'],['RP']
+
+TERM-->[].['VAR_FLOAT'],['RP']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['RP']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['RP']
+
+
+
+57) 
+	TERM-->['LP', 'EXP'].['RP'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:1 edges
+____________________
+
+58) 
+	EXP-->['PRIOR2'].['TAIL2'],['RP']	:3 edges
+____________________TAIL2-->[].['ADD', 'PRIOR2', 'TAIL2'],['RP']
+
+TAIL2-->[].['SUB', 'PRIOR2', 'TAIL2'],['RP']
+
+TAIL2-->[].[],['RP']
+
+
+
+59) 
+	PRIOR2-->['TERM'].['TAIL1'],['ADD', 'SUB', 'RP']	:4 edges
+____________________TAIL1-->[].['MUL', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].['DIV', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].['REMAINDER', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].[],['ADD', 'SUB', 'RP']
+
+
+
+60) 
+	TERM-->['LP'].['EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:9 edges
+____________________EXP-->[].['PRIOR2', 'TAIL2'],['RP']
+
+PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+61) 
+	TERM-->['ID'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+62) 
+	TERM-->['VAR_INT'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+63) 
+	TERM-->['VAR_FLOAT'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+64) 
+	TERM-->['DQUOTE'].['VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:1 edges
+____________________
+
+65) 
+	TERM-->['ARRAY'].['LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:1 edges
+____________________
+
+66) 
+	TERM-->['DQUOTE', 'VAR_STRING'].['DQUOTE'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:1 edges
+____________________
+
+67) 
+	TERM-->['ARRAY', 'LB'].['VAR_INT', 'RB'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:1 edges
+____________________
+
+68) 
+	ASSIGN-->['ID', 'VARTAIL', 'ASGN', 'EXP'].['EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:1 edges
+____________________
+
+69) 
+	EXP-->['PRIOR2'].['TAIL2'],['EOL']	:3 edges
+____________________TAIL2-->[].['ADD', 'PRIOR2', 'TAIL2'],['EOL']
+
+TAIL2-->[].['SUB', 'PRIOR2', 'TAIL2'],['EOL']
+
+TAIL2-->[].[],['EOL']
+
+
+
+70) 
+	PRIOR2-->['TERM'].['TAIL1'],['ADD', 'SUB', 'RP', 'EOL']	:4 edges
+____________________TAIL1-->[].['MUL', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].['DIV', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].['REMAINDER', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].[],['ADD', 'SUB', 'RP', 'EOL']
+
+
+
+71) 
+	TERM-->['LP'].['EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:9 edges
+____________________EXP-->[].['PRIOR2', 'TAIL2'],['RP']
+
+PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+72) 
+	TERM-->['ID'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+73) 
+	TERM-->['VAR_INT'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+74) 
+	TERM-->['VAR_FLOAT'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+75) 
+	TERM-->['DQUOTE'].['VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:1 edges
+____________________
+
+76) 
+	TERM-->['ARRAY'].['LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:1 edges
+____________________
+
+77) 
+	VARTAIL-->['LP', 'VAR_INT', 'RP'].[],['ASGN']	:0 edges
+____________________
+
+78) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP'].['RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:1 edges
+____________________
+
+79) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL', 'LP'].['BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:8 edges
+____________________BOOLEXP-->[].['TERM', 'BOOLTAIL'],['RP']
+
+TERM-->[].['LP', 'EXP', 'RP'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ID'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_INT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_FLOAT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+
+
+80) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP'].['BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:1 edges
+____________________
+
+81) 
+	ASSIGN-->['ID', 'VARTAIL', 'ASGN', 'EXP'].['EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:1 edges
+____________________
+
+82) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK'].['MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['BLOCK']
+
+MAIN-->[].[],['BLOCK']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+
+
+83) 
+	BOOLTAIL-->['GREATER_EQL', 'TERM'].[],['RP']	:0 edges
+____________________
+
+84) 
+	TERM-->['LP'].['EXP', 'RP'],['RP']	:9 edges
+____________________EXP-->[].['PRIOR2', 'TAIL2'],['RP']
+
+PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+85) 
+	TERM-->['ID'].[],['RP']	:0 edges
+____________________
+
+86) 
+	TERM-->['VAR_INT'].[],['RP']	:0 edges
+____________________
+
+87) 
+	TERM-->['VAR_FLOAT'].[],['RP']	:0 edges
+____________________
+
+88) 
+	TERM-->['DQUOTE'].['VAR_STRING', 'DQUOTE'],['RP']	:1 edges
+____________________
+
+89) 
+	TERM-->['ARRAY'].['LB', 'VAR_INT', 'RB'],['RP']	:1 edges
+____________________
+
+90) 
+	BOOLTAIL-->['SMALLER_EQL', 'TERM'].[],['RP']	:0 edges
+____________________
+
+91) 
+	BOOLTAIL-->['GREATER', 'TERM'].[],['RP']	:0 edges
+____________________
+
+92) 
+	BOOLTAIL-->['SMALLER', 'TERM'].[],['RP']	:0 edges
+____________________
+
+93) 
+	BOOLTAIL-->['EQL', 'TERM'].[],['RP']	:0 edges
+____________________
+
+94) 
+	TERM-->['LP', 'EXP', 'RP'].[],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:0 edges
+____________________
+
+95) 
+	EXP-->['PRIOR2', 'TAIL2'].[],['RP']	:0 edges
+____________________
+
+96) 
+	TAIL2-->['ADD'].['PRIOR2', 'TAIL2'],['RP']	:8 edges
+____________________PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+97) 
+	TAIL2-->['SUB'].['PRIOR2', 'TAIL2'],['RP']	:8 edges
+____________________PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+98) 
+	PRIOR2-->['TERM', 'TAIL1'].[],['ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+99) 
+	TAIL1-->['MUL'].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+100) 
+	TAIL1-->['DIV'].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+101) 
+	TAIL1-->['REMAINDER'].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+102) 
+	TERM-->['LP', 'EXP'].['RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:1 edges
+____________________
+
+103) 
+	TERM-->['DQUOTE', 'VAR_STRING'].['DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:1 edges
+____________________
+
+104) 
+	TERM-->['ARRAY', 'LB'].['VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:1 edges
+____________________
+
+105) 
+	TERM-->['DQUOTE', 'VAR_STRING', 'DQUOTE'].[],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:0 edges
+____________________
+
+106) 
+	TERM-->['ARRAY', 'LB', 'VAR_INT'].['RB'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:1 edges
+____________________
+
+107) 
+	ASSIGN-->['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:0 edges
+____________________
+
+108) 
+	EXP-->['PRIOR2', 'TAIL2'].[],['EOL']	:0 edges
+____________________
+
+109) 
+	TAIL2-->['ADD'].['PRIOR2', 'TAIL2'],['EOL']	:8 edges
+____________________PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+110) 
+	TAIL2-->['SUB'].['PRIOR2', 'TAIL2'],['EOL']	:8 edges
+____________________PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+111) 
+	PRIOR2-->['TERM', 'TAIL1'].[],['ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+112) 
+	TAIL1-->['MUL'].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+113) 
+	TAIL1-->['DIV'].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+114) 
+	TAIL1-->['REMAINDER'].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']	:7 edges
+____________________TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+115) 
+	TERM-->['LP', 'EXP'].['RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:1 edges
+____________________
+
+116) 
+	TERM-->['DQUOTE', 'VAR_STRING'].['DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:1 edges
+____________________
+
+117) 
+	TERM-->['ARRAY', 'LB'].['VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:1 edges
+____________________
+
+118) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:0 edges
+____________________
+
+119) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP'].['RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:1 edges
+____________________
+
+120) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK'].['MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['BLOCK']
+
+MAIN-->[].[],['BLOCK']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+
+
+121) 
+	ASSIGN-->['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:0 edges
+____________________
+
+122) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN'].['BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:1 edges
+____________________
+
+123) 
+	MAIN-->['STATEMENT'].['MAIN'],['BLOCK']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['BLOCK']
+
+MAIN-->[].[],['BLOCK']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+
+
+124) 
+	STATEMENT-->['LOOP'].['MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['UNTIL']
+
+MAIN-->[].[],['UNTIL']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+
+
+125) 
+	STATEMENT-->['CONDITION'].['LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:1 edges
+____________________
+
+126) 
+	STATEMENT-->['SL_COMMENT'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:0 edges
+____________________
+
+127) 
+	STATEMENT-->['ML_COMMENT'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:0 edges
+____________________
+
+128) 
+	STATEMENT-->['TYPE'].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:2 edges
+____________________ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+
+
+129) 
+	STATEMENT-->['ASSIGN'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:0 edges
+____________________
+
+130) 
+	ASSIGN-->['ID'].['VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:2 edges
+____________________VARTAIL-->[].['LP', 'VAR_INT', 'RP'],['ASGN']
+
+VARTAIL-->[].[],['ASGN']
+
+
+
+131) 
+	TERM-->['LP', 'EXP'].['RP'],['RP']	:1 edges
+____________________
+
+132) 
+	TERM-->['DQUOTE', 'VAR_STRING'].['DQUOTE'],['RP']	:1 edges
+____________________
+
+133) 
+	TERM-->['ARRAY', 'LB'].['VAR_INT', 'RB'],['RP']	:1 edges
+____________________
+
+134) 
+	TAIL2-->['ADD', 'PRIOR2'].['TAIL2'],['RP']	:3 edges
+____________________TAIL2-->[].['ADD', 'PRIOR2', 'TAIL2'],['RP']
+
+TAIL2-->[].['SUB', 'PRIOR2', 'TAIL2'],['RP']
+
+TAIL2-->[].[],['RP']
+
+
+
+135) 
+	TAIL2-->['SUB', 'PRIOR2'].['TAIL2'],['RP']	:3 edges
+____________________TAIL2-->[].['ADD', 'PRIOR2', 'TAIL2'],['RP']
+
+TAIL2-->[].['SUB', 'PRIOR2', 'TAIL2'],['RP']
+
+TAIL2-->[].[],['RP']
+
+
+
+136) 
+	TAIL1-->['MUL', 'TERM'].['TAIL1'],['ADD', 'SUB', 'RP']	:4 edges
+____________________TAIL1-->[].['MUL', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].['DIV', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].['REMAINDER', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].[],['ADD', 'SUB', 'RP']
+
+
+
+137) 
+	TAIL1-->['DIV', 'TERM'].['TAIL1'],['ADD', 'SUB', 'RP']	:4 edges
+____________________TAIL1-->[].['MUL', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].['DIV', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].['REMAINDER', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].[],['ADD', 'SUB', 'RP']
+
+
+
+138) 
+	TAIL1-->['REMAINDER', 'TERM'].['TAIL1'],['ADD', 'SUB', 'RP']	:4 edges
+____________________TAIL1-->[].['MUL', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].['DIV', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].['REMAINDER', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP']
+
+TAIL1-->[].[],['ADD', 'SUB', 'RP']
+
+
+
+139) 
+	TERM-->['LP', 'EXP', 'RP'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+140) 
+	TERM-->['DQUOTE', 'VAR_STRING', 'DQUOTE'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+141) 
+	TERM-->['ARRAY', 'LB', 'VAR_INT'].['RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:1 edges
+____________________
+
+142) 
+	TERM-->['ARRAY', 'LB', 'VAR_INT', 'RB'].[],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']	:0 edges
+____________________
+
+143) 
+	TAIL2-->['ADD', 'PRIOR2'].['TAIL2'],['EOL']	:3 edges
+____________________TAIL2-->[].['ADD', 'PRIOR2', 'TAIL2'],['EOL']
+
+TAIL2-->[].['SUB', 'PRIOR2', 'TAIL2'],['EOL']
+
+TAIL2-->[].[],['EOL']
+
+
+
+144) 
+	TAIL2-->['SUB', 'PRIOR2'].['TAIL2'],['EOL']	:3 edges
+____________________TAIL2-->[].['ADD', 'PRIOR2', 'TAIL2'],['EOL']
+
+TAIL2-->[].['SUB', 'PRIOR2', 'TAIL2'],['EOL']
+
+TAIL2-->[].[],['EOL']
+
+
+
+145) 
+	TAIL1-->['MUL', 'TERM'].['TAIL1'],['ADD', 'SUB', 'RP', 'EOL']	:4 edges
+____________________TAIL1-->[].['MUL', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].['DIV', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].['REMAINDER', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].[],['ADD', 'SUB', 'RP', 'EOL']
+
+
+
+146) 
+	TAIL1-->['DIV', 'TERM'].['TAIL1'],['ADD', 'SUB', 'RP', 'EOL']	:4 edges
+____________________TAIL1-->[].['MUL', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].['DIV', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].['REMAINDER', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].[],['ADD', 'SUB', 'RP', 'EOL']
+
+
+
+147) 
+	TAIL1-->['REMAINDER', 'TERM'].['TAIL1'],['ADD', 'SUB', 'RP', 'EOL']	:4 edges
+____________________TAIL1-->[].['MUL', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].['DIV', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].['REMAINDER', 'TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TAIL1-->[].[],['ADD', 'SUB', 'RP', 'EOL']
+
+
+
+148) 
+	TERM-->['LP', 'EXP', 'RP'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+149) 
+	TERM-->['DQUOTE', 'VAR_STRING', 'DQUOTE'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+150) 
+	TERM-->['ARRAY', 'LB', 'VAR_INT'].['RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:1 edges
+____________________
+
+151) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:0 edges
+____________________
+
+152) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN'].['BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:1 edges
+____________________
+
+153) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END']	:0 edges
+____________________
+
+154) 
+	MAIN-->['STATEMENT', 'MAIN'].[],['BLOCK']	:0 edges
+____________________
+
+155) 
+	STATEMENT-->['LOOP', 'MAIN'].['UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:1 edges
+____________________
+
+156) 
+	STATEMENT-->['CONDITION', 'LP'].['BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:8 edges
+____________________BOOLEXP-->[].['TERM', 'BOOLTAIL'],['RP']
+
+TERM-->[].['LP', 'EXP', 'RP'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ID'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_INT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_FLOAT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+
+
+157) 
+	STATEMENT-->['TYPE', 'ASSIGN'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:0 edges
+____________________
+
+158) 
+	ASSIGN-->['ID', 'VARTAIL'].['ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:1 edges
+____________________
+
+159) 
+	TERM-->['LP', 'EXP', 'RP'].[],['RP']	:0 edges
+____________________
+
+160) 
+	TERM-->['DQUOTE', 'VAR_STRING', 'DQUOTE'].[],['RP']	:0 edges
+____________________
+
+161) 
+	TERM-->['ARRAY', 'LB', 'VAR_INT'].['RB'],['RP']	:1 edges
+____________________
+
+162) 
+	TAIL2-->['ADD', 'PRIOR2', 'TAIL2'].[],['RP']	:0 edges
+____________________
+
+163) 
+	TAIL2-->['SUB', 'PRIOR2', 'TAIL2'].[],['RP']	:0 edges
+____________________
+
+164) 
+	TAIL1-->['MUL', 'TERM', 'TAIL1'].[],['ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+165) 
+	TAIL1-->['DIV', 'TERM', 'TAIL1'].[],['ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+166) 
+	TAIL1-->['REMAINDER', 'TERM', 'TAIL1'].[],['ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+167) 
+	TERM-->['ARRAY', 'LB', 'VAR_INT', 'RB'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP']	:0 edges
+____________________
+
+168) 
+	TAIL2-->['ADD', 'PRIOR2', 'TAIL2'].[],['EOL']	:0 edges
+____________________
+
+169) 
+	TAIL2-->['SUB', 'PRIOR2', 'TAIL2'].[],['EOL']	:0 edges
+____________________
+
+170) 
+	TAIL1-->['MUL', 'TERM', 'TAIL1'].[],['ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+171) 
+	TAIL1-->['DIV', 'TERM', 'TAIL1'].[],['ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+172) 
+	TAIL1-->['REMAINDER', 'TERM', 'TAIL1'].[],['ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+173) 
+	TERM-->['ARRAY', 'LB', 'VAR_INT', 'RB'].[],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']	:0 edges
+____________________
+
+174) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL']	:0 edges
+____________________
+
+175) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL'].['LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:1 edges
+____________________
+
+176) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP'].['RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:1 edges
+____________________
+
+177) 
+	ASSIGN-->['ID', 'VARTAIL', 'ASGN'].['EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:9 edges
+____________________EXP-->[].['PRIOR2', 'TAIL2'],['EOL']
+
+PRIOR2-->[].['TERM', 'TAIL1'],['ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['LP', 'EXP', 'RP'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ID'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_INT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['VAR_FLOAT'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['MUL', 'DIV', 'REMAINDER', 'ADD', 'SUB', 'RP', 'EOL']
+
+
+
+178) 
+	TERM-->['ARRAY', 'LB', 'VAR_INT', 'RB'].[],['RP']	:0 edges
+____________________
+
+179) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL', 'LP'].['BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:8 edges
+____________________BOOLEXP-->[].['TERM', 'BOOLTAIL'],['RP']
+
+TERM-->[].['LP', 'EXP', 'RP'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ID'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_INT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['VAR_FLOAT'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['DQUOTE', 'VAR_STRING', 'DQUOTE'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+TERM-->[].['ARRAY', 'LB', 'VAR_INT', 'RB'],['GREATER_EQL', 'SMALLER_EQL', 'GREATER', 'SMALLER', 'EQL']
+
+
+
+180) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP'].['BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:1 edges
+____________________
+
+181) 
+	ASSIGN-->['ID', 'VARTAIL', 'ASGN', 'EXP'].['EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:1 edges
+____________________
+
+182) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP'].['RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:1 edges
+____________________
+
+183) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK'].['MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:12 edges
+____________________MAIN-->[].['STATEMENT', 'MAIN'],['BLOCK']
+
+MAIN-->[].[],['BLOCK']
+
+STATEMENT-->[].['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['SL_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ML_COMMENT'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['TYPE', 'ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+STATEMENT-->[].['ASSIGN'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+TYPE-->[].['STR'],['ID']
+
+TYPE-->[].['FLT'],['ID']
+
+TYPE-->[].['NUM'],['ID']
+
+ASSIGN-->[].['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']
+
+
+
+184) 
+	ASSIGN-->['ID', 'VARTAIL', 'ASGN', 'EXP', 'EOL'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:0 edges
+____________________
+
+185) 
+	STATEMENT-->['LOOP', 'MAIN', 'UNTIL', 'LP', 'BOOLEXP', 'RP'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:0 edges
+____________________
+
+186) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN'].['BLOCK'],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:1 edges
+____________________
+
+187) 
+	STATEMENT-->['CONDITION', 'LP', 'BOOLEXP', 'RP', 'BLOCK', 'MAIN', 'BLOCK'].[],['LOOP', 'CONDITION', 'SL_COMMENT', 'ML_COMMENT', 'ID', 'STR', 'FLT', 'NUM', 'END', 'UNTIL', 'BLOCK']	:0 edges
+____________________
+

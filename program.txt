@@ -1,0 +1,44 @@
+Begin
+	Num var1 := 0 |
+	Flt var45 := 34.7767 |
+	Str var123456 := " var3 " | 
+	Str var22 := "hello" |
+	var482 := Array [ 10 ] |
+	var482(1) := 2|
+	Num var1 := 5 |
+
+	% this is the first comment
+
+	Loop
+		var45 := var44 / 2 |
+		var1 := var1 - 2 |
+	Until  (var1 >= 10)
+
+	
+	Num var1 := 1 - 5 * 4 / 2 + 3 // 10 |
+	
+	%% this 
+		Is
+			The 
+		Second
+			Comment %%
+
+	Condition ( var45 > 1 )
+	Block
+		var10 := 1 |
+		Loop
+			var45 := var44 / 2 |
+			Condition ( var45 <= 1 )
+			Block
+				var1 := var1 - 2 |
+			Block
+		Until  (var1 >= 10)
+		var5 := 1 |
+	Block
+	
+	%% this 
+		Is
+			Open
+				comment	%%
+
+End

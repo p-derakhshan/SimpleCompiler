@@ -1,0 +1,42 @@
+________________SYMBOLTABLE_________________
+Index  | Lexeme Code     | Constant       
+____________________________________________
+0      | Loop            | LOOP           
+1      | Until           | UNTIL          
+2      | Str             | STR            
+3      | Num             | NUM            
+4      | Flt             | FLT            
+5      | Condition       | CONDITION      
+6      | Block           | BLOCK          
+7      | Array           | ARRAY          
+8      | Begin           | BEGIN          
+9      | End             | END            
+____________________________________________
+10     | |               | EOL            
+11     | %               | SL_COMMENT     
+12     | %%              | ML_COMMENT     
+13     | *               | MUL            
+14     | /               | DIV            
+15     | +               | ADD            
+16     | -               | SUB            
+17     | //              | REMAINDER      
+18     | (               | LP             
+19     | )               | RP             
+20     | [               | LB             
+21     | ]               | RB             
+22     | "               | DQUOTE         
+23     | :=              | ASGN           
+24     | ==              | EQL            
+25     | >=              | GREATER_EQL    
+26     | <=              | SMALLER_EQL    
+27     | >               | GREATER        
+28     | <               | SMALLER        
+____________________________________________
+29     | var1            | 29             
+30     | var45           | 30             
+31     | var123456       | 31             
+32     | var22           | 32             
+33     | var482          | 33             
+34     | var44           | 34             
+35     | var10           | 35             
+36     | var5            | 36             

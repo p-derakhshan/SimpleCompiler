@@ -1,0 +1,37 @@
+ZERO -> START EOF
+START -> begin MAIN end  
+MAIN -> STATEMENT MAIN 
+MAIN -> ~    
+STATEMENT -> loop MAIN until ( BOOLEXP ) 
+STATEMENT -> condition ( BOOLEXP ) block MAIN block
+STATEMENT -> comments
+STATEMENT -> commentm 
+STATEMENT -> TYPE ASSIGN
+STATEMENT -> ASSIGN
+ASSIGN -> id VARTAIL = EXP # 
+TYPE -> str
+TYPE -> flt
+TYPE -> num
+VARTAIL -> ( varint )
+VARTAIL -> ~      
+EXP -> PRIOR2 TAIL2
+TAIL2 -> + PRIOR2 TAIL2
+TAIL2 -> - PRIOR2 TAIL2
+TAIL2 -> ~   
+PRIOR2 -> TERM TAIL1    
+TAIL1 -> * TERM TAIL1   
+TAIL1 -> / TERM TAIL1   
+TAIL1 -> % TERM TAIL1   
+TAIL1 -> ~ 
+TERM -> ( EXP ) 
+TERM -> id
+TERM -> varint 
+TERM -> varfloat 
+TERM -> " varquote " 
+TERM -> array ( varint )
+BOOLEXP -> TERM BOOLTAIL
+BOOLTAIL -> >= TERM 
+BOOLTAIL -> <= TERM  
+BOOLTAIL -> > TERM   
+BOOLTAIL -> < TERM  
+BOOLTAIL -> = TERM 
